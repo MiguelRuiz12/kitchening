@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<%- include('../partials/head',{
+	title : "Login"
+}) %>
+
+<body>
+	<%- include('../partials/header') %>
+
+	<main>
+		<section class="row">
+			<div class="col-12 col-md-10 col-lg-8 mx-auto my-5 ">
+				<div class="card shadow">
+					<div class="card-header">
+						<h4 class="card-title">Registro de Usuario</h4>
+					</div>
+					<div class="card-body">
+						<form action="" class="row">
+							<div class="col-12 col-md-6 mb-3">
+								<label for="name" class="form-label">Nombre</label>
+								<input type="text" name="name" class="form-control" id="name" placeholder="fulanito">
+							  </div>
+							  <div class="col-12 col-md-6 mb-3">
+								<label for="surname" class="form-label">Apellido</label>
+								<input type="text" name="surname" class="form-control" id="surname" placeholder="fulanito">
+							  </div>
+							  <div class="mb-3">
+								<label for="email" class="form-label">Correo Electronico</label>
+								<input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+							  </div>
+							  <div class="col-12 col-md-6 mb-3">
+								<label for="password" class="form-label">Contraseña</label>
+								<input type="password" name= "password" class="form-control" id="password">
+							  </div>
+							  <div class="col-12 col-md-6 mb-3">
+								<label for="password2" class="form-label">Confirmar Contraseña</label>
+								<input type="password" name= "password2" class="form-control" id="password2">
+							  </div>
+							  <div class="col-12 col-md-6 mb-3">
+							  <div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="remember" name="remember">
+								<label class="form-check-label" for="flexCheckDefault">
+								  Acepto Termino y Condiciones
+								</label>
+							  </div>
+							</div>
+							  <div class="col-12 col-md-6 mb-3">
+								<button class="btn btn-dark w-100">Registrate</button>
+							  </div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<%- include('../partials/footer') %>
+</body>
+</html>
