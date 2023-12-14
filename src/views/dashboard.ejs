@@ -14,7 +14,7 @@
 				<div class="card">
 					<div class="card-header d-flex justify-content-between">
 						<h4 class="cart-title">Restaurantes</h4>
-						<a class="btn btn-dark" href="/products/agregar">Nuevo</a>
+						<a class="btn btn-dark" href="/productos/agregar">Nuevo</a>
 					</div>
 					<div class="card-body">
 					<table class="table">
@@ -34,7 +34,7 @@
 									<td><%= name %></td>
 									<td><%= address %></td>
 									<td><%= categoria %></td>
-									<td>Acciones...</td>
+									<td><a class="text-primary" href="/productos/editar/<%= id %>">Editar</a></td>
 								  </tr>
 							<% }) %>
 						  
