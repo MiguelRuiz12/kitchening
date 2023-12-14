@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<%- include('../partials/head',{
+	title : "dashboard"
+}) %>
+
+<body>
+	<%- include('../partials/header-admin') %>
+
+    <main class="container">
+		<section class="row my-5">
+			<div class="col-12 col-md-10 mx-auto">
+				<div class="card">
+					<div class="card-header d-flex justify-content-between">
+						<h4 class="cart-title">Agregar Restaurant</h4>
+                        <hr>
+					</div>
+					<div class="card-body">
+                        <form action="">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Nombre del restaurant">
+                                <label for="name">Restaurant</label>
+                              </div>
+                              <div class="form-floating">
+                                <input type="text" class="form-control" id="address" placeholder="Password">
+                                <label for="address">Direccion</label>
+                              </div>
+                        </form>
+					 </div>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<%- include('../partials/scripts') %>
+
+</body>
+</html>

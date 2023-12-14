@@ -17,12 +17,13 @@
 
 			<!-- productos -->
 			<div class="home__main__products">
-				
-				<% for( let i = 0; i < 6; i++ ) { %>
 
-					<%- include('./partials/product-card') %>
+				<% products.forEach(product => { %>
+					<%- include('./partials/product-card',{
+						...product
+					}) %>
 
-				<% } %>
+				<% }) %>
 				
 			</div>
 		</main>
