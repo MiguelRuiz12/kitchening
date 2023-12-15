@@ -16,8 +16,8 @@
 						<h4 class="cart-title">Restaurantes</h4>
 						<a class="btn btn-dark" href="/productos/agregar">Nuevo</a>
 					</div>
-					<div class="card-body">
-					<table class="table">
+					<div class="card-body table-responsive">
+					<table class="table table-striped">
 						<thead>
 						  <tr>
 							<th scope="col">#</th>
@@ -28,13 +28,28 @@
 						  </tr>
 						</thead>
 						<tbody>
-							<% products.forEach(({id,name,address,categoria}) => { %>
+							<% products.forEach(({id,name,address,categoria, mainImage, description,phone}) => { %>
 								<tr>
 									<th scope="row"><%= id %></th>
 									<td><%= name %></td>
 									<td><%= address %></td>
 									<td><%= categoria %></td>
-									<td><a class="text-primary" href="/productos/editar/<%= id %>">Editar</a></td>
+									<td>
+										<div class="d-flex gap-2">
+										<button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<%= id %>"><i class="fa-solid fa-eye"></i></a></button>
+										<a class="btn btn-sm btn-outline-success" href="/productos/editar/<%= id %>"><i class="fa-solid fa-pencil"></i></a>
+										<a class="btn btn-sm btn-outline-danger" href="/productos/eliminar/<%= id %>"><i class="fa-solid fa-trash"></i></a>
+										<%- include('./partials/modal-product-admin',{
+											id,
+											name,
+											address,
+											categoria,
+											mainImage,
+											description,
+											phone
+										}) %>
+									</div>
+									</td>
 								  </tr>
 							<% }) %>
 						  
