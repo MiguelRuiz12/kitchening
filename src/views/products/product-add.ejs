@@ -19,7 +19,7 @@
                                 </nav>
                             </div>
                             <div class="card-body">
-                                <form action="" class="row">
+                                <form action="/productos/crear" method="POST" class="row">
                                     <h3>Nuevo Restaurant</h3>
                                     <hr>
                                     <div class="col-12 col-md-6">
@@ -34,16 +34,23 @@
                                             <label for="address">Direccion</label>
                                         </div>
                                     </div>
+                                    <div class="col-12 mb-3 ">
+                                        <div class="form-floating w-100 d-flex justify-content-between align-items-center gap-3">
+                                            <input name="url_map" type="text" class="form-control" id="url_map">
+                                            <label for="address">URL Google Maps</label>
+                                            <a href="https://www.google.com/maps" target="_blank" class="btn btn-lg btn-outline-dark"><i class="fa-solid fa-map-location-dot"></i></a>
+                                        </div>
+                                    </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <select name="category" class="form-select" id="category"
+                                            <select name="categoria" class="form-select" id="categoria"
                                                 aria-label="Floating label select example">
                                                 <option value="" selected hidden>Seleccionar...</option>
                                                 <option value="barato">Barato</option>
                                                 <option value="romantico">Romantico</option>
                                                 <option value="sofisticado">Sofisticado</option>
                                             </select>
-                                            <label for="category">Categoria</label>
+                                            <label for="categoria">Categoria</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-3 mb-3">
@@ -58,15 +65,15 @@
                                     </div>
                                     <div class="col-12 mb-3">
                                         <div class="form-floating">
-                                            <textarea name="Description" class="form-control"
-                                                placeholder="Leave a comment here" id="Description"
+                                            <textarea name="description" class="form-control"
+                                                placeholder="Leave a comment here" id="description"
                                                 style="height: 150px;"></textarea>
-                                            <label for="Description">Descripcion</label>
+                                            <label for="description">Descripcion</label>
                                         </div>
                                     </div>
                                     <div class="col-12 d-flex justify-content-end">
 
-                                        <button class="btn btn-lg btn-dark ">Guardar cambios</button>
+                                        <button type="submit" class="btn btn-lg btn-dark ">Guardar cambios</button>
                                     </div>
                                 </form>
                             </div>
