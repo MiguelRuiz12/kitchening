@@ -13,7 +13,11 @@
 			<div class="col-12 col-md-10 mx-auto">
 				<div class="card">
 					<div class="card-header d-flex justify-content-between">
-						<h4 class="cart-title">Restaurantes</h4>
+						<% if (locals.keyword) { %>
+							<h4 class="cart-title">Resultado para: <%= keyword %></h4>
+							<% } else { %>
+							 <h4 class="cart-title">Todos los restó</h4>
+						<% } %>
 						<a class="btn btn-dark" href="/productos/agregar">Nuevo</a>
 					</div>
 					<div class="card-body table-responsive">
