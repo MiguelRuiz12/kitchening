@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index.routes');
 const usersRouter = require('./routes/users.routes');
@@ -10,7 +11,7 @@ const productsRouter = require('./routes/products.routes');
 
 
 const app = express();
-
+ 
 // view engine setup
 app
  .set('views', path.join(__dirname, 'views'))
@@ -26,6 +27,9 @@ app
 
  // Recursos Estaticos
  .use(express.static(path.join(__dirname,'..', 'public')))
+
+ /* soporte para metodos PUT, PATVH & DELETE*/ 
+  .use(methodOverride('_method'))
 
  // Rutas
  .use('/', indexRouter)

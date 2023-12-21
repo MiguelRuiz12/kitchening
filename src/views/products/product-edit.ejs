@@ -19,8 +19,8 @@
                                 </nav>
                             </div>
                             <div class="card-body">
-                                <form action="" class="row">
-                                    <h3>Editar:"<%= name %>"</h3>
+                                <form action="/productos/actualizar/<%= id %>?_method=PUT" class="row" method="POST">
+                                    <h3>Editando:"<%= name %>"</h3>
                                     <hr>
                                     <div class="col-12 col-md-6">
                                         <div class="form-floating mb-3">
@@ -36,17 +36,17 @@
                                     </div>
                                     <div class="col-12 mb-3 ">
                                         <div class="form-floating w-100 d-flex justify-content-between align-items-center gap-3">
-                                            <input name="address" type="text" class="form-control" id="address" value="<%= url_map %>">
-                                            <label for="address">URL Google Maps</label>
+                                            <input name="url_map" type="text" class="form-control" id="url_map" value="<%= url_map %>">
+                                            <label for="url_map">URL Google Maps</label>
                                             <a href="https://www.google.com/maps" target="_blank" class="btn btn-lg btn-outline-dark"><i class="fa-solid fa-map-location-dot"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <select name="category" class="form-select" id="category" aria-label="Floating label select example">
-                                                <option <%= categoria === "barato" && 'selected' %> value="barato">Barato</option>
-                                                <option <%= categoria === "romantico" && 'selected' %> value="romantico">Romantico</option>
-                                                <option <%= categoria === "sofisticado" && 'selected' %> value="sofisticado">Sofisticado</option>
+                                            <select name="categoria" class="form-select" id="categoria" aria-label="Floating label select example">
+                                                <option <%= categoria === "barato" && "selected" %> value="barato">Barato</option>
+                                                <option <%= categoria === "romantico" && "selected" %> value="romantico">Romantico</option>
+                                                <option <%= categoria === "sofisticado" && "selected" %> value="sofisticado">Sofisticado</option>
                                             </select>
                                             <label for="categoria">Categoria</label>
                                         </div>

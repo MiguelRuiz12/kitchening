@@ -50,16 +50,21 @@
 													<div class="d-flex gap-2">
 														<button class="btn btn-sm btn-outline-primary"
 															data-bs-toggle="modal"
-															data-bs-target="#exampleModal<%= id %>"><i
-																class="fa-solid fa-eye"></i></a></button>
+															data-bs-target="#showModalProduct<%= id %>"><i
+																class="fa-solid fa-eye"></i></a>
+														</button>
 														<a class="btn btn-sm btn-outline-success"
 															href="/productos/editar/<%= id %>"><i
 																class="fa-solid fa-pencil"></i></a>
-														<a class="btn btn-sm btn-outline-danger"
-															href="/productos/eliminar/<%= id %>"><i
-																class="fa-solid fa-trash"></i></a>
+														<button class="btn btn-sm btn-outline-danger"
+															data-bs-toggle="modal"
+															data-bs-target="#warningRemoveModalLabel<%= id %>">
+															<i class="fa-solid fa-trash"></i>
+														</button>
 														<%- include('./partials/modal-product-admin',{ id, name,
 															address, categoria, mainImage, description, phone }) %>
+															<%- include('./partials/modal-warning-delete-product',{ id,
+																name }) %>
 													</div>
 												</td>
 											</tr>
